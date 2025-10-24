@@ -15,7 +15,13 @@ struct PlaylistView: View {
     @State private var onlySongOfArtist = false
     @State private var sortByDuration = false
     
-    
+//    var songTriees: [Binding<song>]{
+//        let bindings: [Binding<song>] =librairie.song.indices.map{ index in
+//            $libraries.song[index]
+//        }
+//        
+//        return bindings.sorted { (}
+//    }
     
     var body: some View {
         VStack(spacing: 16) {
