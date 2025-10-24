@@ -19,6 +19,7 @@
 		070124E82EA2285000C50B7C /* LibrairieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070124E72EA2285000C50B7C /* LibrairieRepository.swift */; };
 		070124EA2EA22BEA00C50B7C /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070124E92EA22BEA00C50B7C /* Injector.swift */; };
 		070124ED2EA22D3100C50B7C /* SongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070124EC2EA22D3100C50B7C /* SongView.swift */; };
+		07AB7B2F2EAB60F1009C0F6D /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AB7B2E2EAB60F1009C0F6D /* Choice.swift */; };
 		07ABF6B02EA61F1500B4548A /* PlaylistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ABF6AF2EA61F1500B4548A /* PlaylistView.swift */; };
 		07ABF6B22EA629DB00B4548A /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ABF6B12EA629DB00B4548A /* TitleView.swift */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		070124E72EA2285000C50B7C /* LibrairieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrairieRepository.swift; sourceTree = "<group>"; };
 		070124E92EA22BEA00C50B7C /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
 		070124EC2EA22D3100C50B7C /* SongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongView.swift; sourceTree = "<group>"; };
+		07AB7B2E2EAB60F1009C0F6D /* Choice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choice.swift; sourceTree = "<group>"; };
 		07ABF6AF2EA61F1500B4548A /* PlaylistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistView.swift; sourceTree = "<group>"; };
 		07ABF6B12EA629DB00B4548A /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				070124E22EA2250500C50B7C /* Song.swift */,
+				07AB7B2E2EAB60F1009C0F6D /* Choice.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				07ABF6B02EA61F1500B4548A /* PlaylistView.swift in Sources */,
 				070124E82EA2285000C50B7C /* LibrairieRepository.swift in Sources */,
 				070124ED2EA22D3100C50B7C /* SongView.swift in Sources */,
+				07AB7B2F2EAB60F1009C0F6D /* Choice.swift in Sources */,
 				070124B72EA2230F00C50B7C /* PlouyoustApp.swift in Sources */,
 				070124E52EA227EE00C50B7C /* LibrairieDummyImpl.swift in Sources */,
 				070124E32EA2250500C50B7C /* Song.swift in Sources */,

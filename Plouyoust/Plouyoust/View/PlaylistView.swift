@@ -14,14 +14,23 @@ struct PlaylistView: View {
     @State private var onlySongHaveTitle = false
     @State private var onlySongOfArtist = false
     @State private var sortByDuration = false
+    @State var selectedChoice: Choice = .title
     
-//    var songTriees: [Binding<song>]{
-//        let bindings: [Binding<song>] =librairie.song.indices.map{ index in
-//            $libraries.song[index]
-//        }
-//        
-//        return bindings.sorted { (}
-//    }
+    var songTriees: [Binding<Song>]{
+        let bindings: [Binding<Song>] = librairie.song.indices.map{ index in
+            $librairie.song[index]
+        }
+        
+        return bindings.sorted { (a: Binding<Song>, b: Binding<Song>) in
+            switch selectedChoice {
+            case .title:
+                return a.wrappedValue.title.lowercased() < b.wrappedValue.title.lowercased()
+            case .artist:
+                return a.wrappedValue.artist.lowercased() < b.wrappedValue.artist.lowercased()
+            case .duration:
+                return a.wrappedValue.time < b.wrappedValue.time
+            }}
+    }
     
     var body: some View {
         VStack(spacing: 16) {
@@ -34,29 +43,19 @@ struct PlaylistView: View {
             HStack(spacing: 16){
                 Text("Sort by").bold(true)
             }
-            HStack(spacing: 16){
-                Toggle(isOn: $onlySongHaveTitle) {
-                    Text("Title")
-                }
-                Toggle(isOn: $onlySongOfArtist) {
-                    Text("Artiste")
-                }
-                Toggle(isOn: $sortByDuration) {
-                    Text("Duration")
-                        .lineLimit(1)
-                        .fixedSize()
+            Picker("Choice", selection: $selectedChoice) {
+                ForEach(Choice.allCases) { choice in
+                    Text(choice.rawValue.capitalized)
                 }
             }
-            List($librairie.song) { $song in
-                NavigationLink(destination: TitleView(song: $song)){
-                    SongView(song: song)
+            .pickerStyle(.segmented)
+            List {
+                ForEach(songTriees){ $song in
+                    NavigationLink(destination: TitleView(song: $song)){
+                        SongView(song: song)
+                    }
                 }
             }
-            .navigationTitle("Librairie")
-        }
+        }.navigationTitle("Librairie")
     }
-}
-
-#Preview {
-    PlaylistView()
 }
