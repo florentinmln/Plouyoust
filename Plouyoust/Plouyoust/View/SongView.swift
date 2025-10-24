@@ -28,6 +28,7 @@ struct SongView: View {
                        alignment: .leading)
             Text("\(song.time)")
         }
+        .navigationTitle(song.title)
     }
     
     

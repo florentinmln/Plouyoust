@@ -12,7 +12,9 @@ struct PlouyoustApp: App {
     var body: some Scene {
         WindowGroup {
             //ContentView()	
-            TitleView(song : .constant(Song(title : "Bal de chair", album: "MEMENTO", artist: "THEA", time: 196, image: "/image")))
+            NavigationStack{
+                PlaylistView()
+            }
         }
     }
 }

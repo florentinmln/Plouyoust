@@ -15,6 +15,8 @@ struct PlaylistView: View {
     @State private var onlySongOfArtist = false
     @State private var sortByDuration = false
     
+    
+    
     var body: some View {
         VStack(spacing: 16) {
             HStack(spacing: 16){
@@ -39,10 +41,12 @@ struct PlaylistView: View {
                         .fixedSize()
                 }
             }
-            List(librairie.song){
-                song in	
-                SongView(song: song)
+            List($librairie.song) { $song in
+                NavigationLink(destination: TitleView(song: $song)){
+                    SongView(song: song)
+                }
             }
+            .navigationTitle("Librairie")
         }
     }
 }
