@@ -45,6 +45,7 @@ struct TitleView: View {
                     .keyboardType(.decimalPad)
             }
         }
+        .navigationTitle(song.title)
         .frame(maxHeight: .infinity, alignment: .top)
         .padding()
         /*

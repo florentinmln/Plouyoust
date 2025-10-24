@@ -10,6 +10,7 @@ import SwiftUI
 struct SongView: View {
     
     let song : Song
+    @State private var selected = false
     
     var body: some View {
         HStack(spacing: 16) {
@@ -27,8 +28,10 @@ struct SongView: View {
                 .frame(maxWidth: .infinity,
                        alignment: .leading)
             Text("\(song.time)")
+            
+            Toggle(isOn: $selected){}
+                .padding()
         }
-        .navigationTitle(song.title)
     }
     
     

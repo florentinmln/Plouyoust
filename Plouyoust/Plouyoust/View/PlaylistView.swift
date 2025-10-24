@@ -56,6 +56,7 @@ struct PlaylistView: View {
                     }
                 }
             }
+            .listStyle(PlainListStyle())
         }.navigationTitle("Librairie")
     }
 }
